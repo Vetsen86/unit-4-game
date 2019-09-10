@@ -24,6 +24,8 @@ $(document).ready(function() {
 
     var score = 0;
     var gameOver = false;
+    var wins = 0;
+    var losses = 0;
 
     $("img").on("click", function() {
         if(gameOver) {
@@ -43,7 +45,16 @@ $(document).ready(function() {
         $("#score").text("Your score is : " + score);
 
         if(score === randomNumber) {
-            
+            gameOver = true;
+            $(".win-lose").css("display", "block");
+            wins++;
+            $("#win").text("Wins: " + wins);
+        } else if (score > randomNumber) {
+            gameOver = true;
+            $(".win-lose").css("display", "block");
+            $("#win-text").text("You lose!");
+            losses++;
+            $("#lose").text("Losses: " + losses);
         }
     });
 

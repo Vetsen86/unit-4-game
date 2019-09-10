@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Crystal Collector Game</title>
@@ -29,21 +31,46 @@
         <p>Each time the game starts, the value of the crystals will change.</p>
     </div>
 
-    <div class="random-number">
-        <h2>The random number is:</h2><br>
+    <div class="flex">
+
+        <div>
+            <h2 id="random-number">The random number is:</h2><br>
+        </div>
+
+        <div>
+            <h2 id="score">Your score is: 0</h2><br>
+        </div>
+
     </div>
 
     <div class="crystals">
-        <img src="assets/images/blue-crystal.png"/>
-        <img src="assets/images/brown-crystal.jpg"/>
-        <img src="assets/images/clear-crystal.jpg"/>
-        <img src="assets/images/purple-crystal.jpg"/>
+        <img src="assets/images/blue-crystal.png" id="blueCrystal" />
+        <img src="assets/images/brown-crystal.jpg" id="brownCrystal" />
+        <img src="assets/images/clear-crystal.jpg" id="clearCrystal" />
+        <img src="assets/images/purple-crystal.jpg" id="purpleCrystal" />
     </div>
 
-    <div class="score">
-        <h2>Your score is: </h2><br>
+    <div class="flex">
+        <div>
+            <h2 id="win">Wins: </h2>
+        </div>
+        <div>
+            <h2 id="lose">Losses: </h2>
+        </div>
     </div>
-    
+
+    <div class="win-lose card">
+        <div class="card-body">
+            <h2 class="card-title" id="win-text">You win!</h2>
+            <p class="card-text">Would you like to play again?</p>
+            <a href="#" class="btn btn-primary" id="reset">OK!</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
+
 </body>
 
 </html>

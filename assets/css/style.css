@@ -1,5 +1,8 @@
 body {
     font-family: 'Shadows Into Light', cursive;
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg");
+    background-size: cover;
+    color: white;
 }
 
 .header {
@@ -21,8 +24,11 @@ h2 {
 }
 
 .rules {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px auto;
+    background-color: #8c2387;
+    border: 2px solid white;
+    width: 90%;
+    padding: 20px 0;
 }
 
 .rules h2 {
@@ -35,6 +41,11 @@ h2 {
     font-size: 1.25em;
 }
 
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
 img {
     width: 300px;
     height: 300px;
@@ -42,10 +53,27 @@ img {
     border: 2px solid purple;
 }
 
-.random-number {
-    margin-left: 50px;
+img:hover {
+    cursor: pointer;
 }
 
-.score {
-    margin-left: 50px;
+img:active {
+    border: 2px solid blue;
+}
+
+.crystals {
+    margin-bottom: 50px;
+}
+
+.win-lose {
+    background-color: #8c2387;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -75px;
+    margin-left: -150px;
+    display: none;
 }

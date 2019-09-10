@@ -42,11 +42,12 @@ $(document).ready(function() {
             score += purpleCrystal;
         }
 
-        $("#score").text("Your score is : " + score);
+        $("#score").text("Your score is: " + score);
 
         if(score === randomNumber) {
             gameOver = true;
             $(".win-lose").css("display", "block");
+            $("#win-text").text("You win!");
             wins++;
             $("#win").text("Wins: " + wins);
         } else if (score > randomNumber) {
@@ -56,6 +57,15 @@ $(document).ready(function() {
             losses++;
             $("#lose").text("Losses: " + losses);
         }
+    });
+
+    $("#reset").on("click", function() {
+        score = 0;
+        $("#score").text("Your score is: " + score);
+        gameOver = false;
+        getRandomNumber();
+        getCrystals();
+        $(".win-lose").css("display", "none");
     });
 
 });
